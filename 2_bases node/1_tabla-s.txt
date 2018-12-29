@@ -1,0 +1,1 @@
+s * 1 = NaNs * 2 = NaNs * 3 = NaNs * 4 = NaNs * 5 = NaNs * 6 = NaNs * 7 = NaNs * 8 = NaNs * 9 = NaNs * 10 = NaN
