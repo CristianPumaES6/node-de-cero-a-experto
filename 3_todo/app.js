@@ -1,6 +1,8 @@
 /* Como ejecucar APP.js 
 node app.js crear -d="Ordenar"
 node app.js listar
+node app.js actualizar -d="Ordenar"
+node app.js borrar -d="Ordenar"
 */
 const { argv } = require('./config/yargs');
 const porHacer = require('./por_hacer/por_hacer');
@@ -25,6 +27,10 @@ switch (comando) {
     case 'actualizar':
         let actualizado = porHacer.actualizar(argv.descripcion, argv.completado);
         console.log(actualizado);
+        break;
+    case 'borrar':
+        let borrar = porHacer.borrar(argv.descripcion);
+        console.log(borrar);
         break;
     default:
         console.log('Default.');
