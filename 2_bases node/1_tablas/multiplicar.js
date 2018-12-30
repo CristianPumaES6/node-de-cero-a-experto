@@ -27,6 +27,7 @@ let listarTabla = (base, limite = 10) => {
     for (let i = 1; i <= limite; i++) {
         console.log(`${base} * ${i} = ${base * i} \n`);
     }
+    
 }
 module.exports = {
     crearArchivo,
