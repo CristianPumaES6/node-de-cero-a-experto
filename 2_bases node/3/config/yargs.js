@@ -1,3 +1,6 @@
+
+const colors = require('colors');
+
 const opts = {
     base: {
         demand: true,
@@ -14,6 +17,11 @@ const argv = require('yargs')
     .command('crear', 'Genera un archivo con la tabla de multiplicar', opts)
     .help()
     .argv;
+
+
+    console.log('=============='.green);
+    console.log(`=YARGS OK=`.blue)
+    console.log('=============='.green);
 
 module.exports = {
     argv
