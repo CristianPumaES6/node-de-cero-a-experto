@@ -1,15 +1,15 @@
 const fs = require('fs');
 
-crearArchivo = (base) => {
+crearArchivo = (base,limite) => {
     return new Promise((resolve, reject) => {
         let data = '';
 
-        if(!Number(base)){
+        if (!Number(base)) {
             reject(`error, La base ingresada no es un numero.`);
             return;
         }
 
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= limite; i++) {
             data += `${base} * ${i} = ${base * i} \n`;
         }
 
@@ -22,6 +22,13 @@ crearArchivo = (base) => {
     });
 }
 
-module.exports={
-    crearArchivo
+let listarTabla = (base, limite = 10) => {
+
+    for (let i = 1; i <= limite; i++) {
+        console.log(`${base} * ${i} = ${base * i} \n`);
+    }
+}
+module.exports = {
+    crearArchivo,
+    listarTabla
 }
