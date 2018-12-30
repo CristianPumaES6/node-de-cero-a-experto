@@ -50,9 +50,7 @@ const actualizar = (descripcion, completado = true) => {
 const borrar = (descripcion) => {
     cargarDB();
 
-    let nuevoListado = listadoPorHacer.filter(tarea => {
-        return tarea.descripcion !== descripcion;
-    })
+    let nuevoListado = listadoPorHacer.filter(tarea => tarea.descripcion !== descripcion)
 
     if (listadoPorHacer.length === nuevoListado.length) {//si es el tamaño igual entonces no borro.
         return false;
